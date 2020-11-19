@@ -177,6 +177,14 @@ $(document).ready(function () {
             $(".filter").toggleClass("filter__white");
         }
     });
+    if (shuruna > 814) {
+        $(".filter").removeClass("filter__white");
+    }
+    $(window).resize(function () {
+        if ($(window).width() > 814) {
+            $(".filter").removeClass("filter__white");
+        }
+    });
     $(".filter-close-categories").on("click", function () {
         $(".filter-block-categories").toggleClass("filter--open")
     });
@@ -381,13 +389,13 @@ $(document).ready(function () {
             elem.addClass('catalog-grid__item915');
         }
         if ($(window).width() > 814) {
-            filters.removeClass('filter--none');
-            fil_hide.removeClass("filter-hide-toggle");
+            // filters.removeClass('filter--none');
+            // fil_hide.removeClass("filter-hide-toggle");
             filters.closest(".filter").removeClass("filter__abs");
             elem.removeClass('catalog-grid__item815');
         } else {
-            filters.addClass('filter--none');
-            fil_hide.addClass("filter-hide-toggle");
+            // filters.addClass('filter--none');
+            // fil_hide.addClass("filter-hide-toggle");
             filters.closest(".filter").addClass("filter__abs");
             elem.addClass('catalog-grid__item815');
         }
